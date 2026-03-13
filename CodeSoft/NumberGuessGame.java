@@ -19,11 +19,9 @@ public class NumberGuessGame{
                 if(targetNum > guess)
                 {
                     System.out.println("Your guessing SMALLER than the Target value. Enter the 'Exit' to quit the game:");
-                    if(sc.nextLine() == "Exit");
                 }
                 else{
                     System.out.println("Your guessing GREATER than the Target value. Enter the 'Exit' to quit the game:");
-                    if(sc.nextLine() == "Exit");
                 }
             }
         }
@@ -36,6 +34,13 @@ public class NumberGuessGame{
             gameStart();
             System.out.println("Enter '1' for Start / Restart the Game:");
             isStart = sc.nextInt();
+            if(isStart ==1)
+            {
+                System.out.println("I have a new number with me guess that number\n");
+            }
+            else{
+                System.out.println("Thank you, Come back again!!");
+            }
         }while(isStart==1);
         sc.close();
     }
