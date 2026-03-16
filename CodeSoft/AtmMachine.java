@@ -41,7 +41,7 @@ public class AtmMachine{
     }
     //Show Details of all the Clients
     void showDetails(Bank clint,int i){
-        System.out.println(i+"  \t"+clint.accNum+" \t"+clint.phone+"\t $"+clint.ballance+"\t\t"+clint.name);
+        System.out.println(i+"  \t"+clint.accNum+"\t "+clint.phone+"\t $ "+clint.ballance+"\t\t"+clint.name);
     }
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
@@ -65,12 +65,12 @@ public class AtmMachine{
                     break;
                 case 2:
                     System.out.println("You chosse '2' to Withdraw Amount\nEnter your Account Number:");
-                    account = sc.next();
-                    System.out.println("Enter the Amount you want to withdraw:\n");
-                    amount = sc.nextFloat();       
+                    account = sc.next();      
                     for(int i=0;i<clintNum;i++)
                     {
-                        if(clint[i].accNum.equals(account)){    
+                        if(clint[i].accNum.equals(account)){  
+                            System.out.println("Enter the Amount you want to withdraw:\n");
+                            amount = sc.nextFloat();   
                             a.withdraw(clint[i],account,amount);
                             isFound = true;
                         }
@@ -80,12 +80,12 @@ public class AtmMachine{
                     break;
                 case 3:
                     System.out.println("You chosse '3' to Deposit Amount\nEnter your Account Number:");
-                    account = sc.next();
-                    System.out.println("Enter the Amount you want to deposit:\n");
-                    amount = sc.nextFloat();       
+                    account = sc.next();     
                     for(int i=0;i<clintNum;i++)
                     {
-                        if(clint[i].accNum.equals(account)){    
+                        if(clint[i].accNum.equals(account)){
+                            System.out.println("Enter the Amount you want to deposit:\n");
+                            amount = sc.nextFloat();      
                             a.deposit(clint[i],account,amount);
                             isFound=true;
                         }
