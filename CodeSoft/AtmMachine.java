@@ -43,7 +43,7 @@ public class AtmMachine{
     }
     //Show Details of all the Clients
     void showDetails(Bank clint,int i){
-        System.out.println(i+"  \t"+clint.accNum+"\t "+clint.phone+"\t $ "+clint.ballance+"\t\t"+clint.name);
+        System.out.println(i+1 +"  \t"+clint.accNum+"\t "+clint.phone+"\t $ "+clint.ballance+"\t\t"+clint.name);
     }
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
